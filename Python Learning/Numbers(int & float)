@@ -1,0 +1,22 @@
+#They come under the fundamental data type
+
+print(6) 6
+print(2-4) -2
+print(2*4) 8
+print(2/4) 0.5 (All will give mathematical output)
+
+print(type(6)) Int
+print(type(2-4)) Int
+print(type(2*4)) Int
+print(type(2/4)) Float (The output will be what type of data it is)
+
+(If it is a whole number it's int data and if decimal it's float data)
+
+Let's take 10.56 to understand more about float
+It is hard for the computer to understand and store 10.56 as it has (.) so what the .computer does is it stores 10 and 56 differently
+
+int + int = int
+int + float = float
+float + float = float
+float + int = float
+
