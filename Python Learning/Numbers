@@ -20,3 +20,19 @@ int + float = float
 float + float = float
 float + int = float
 
+#Math Functions
+print(round(3.1) 3
+print(abs(-20) 20(no negative numbers)
+
+All the math functions in Python, modules will not be used so we will focus only on the important ones. We can get math modules from- https://docs.python.org/3/library/math.html
+
+#Operator Precedence
+
+The sequence programming follows similar to BODMAS Rule
+First- Brackets ()
+Second- Parenthesis **
+Third- Multiplication & Division * /
+Fourth- Add & Subtraction + -
+
+
+
