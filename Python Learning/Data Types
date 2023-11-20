@@ -1,0 +1,21 @@
+#I learned about data types in python
+
+#Fundamental Data Types
+
+int
+float
+bool
+str
+list
+tuple
+set
+dic
+
+#Classes
+(Custom Data Types)
+
+#Specialised Data Types
+(Can be understood as Extensions)
+
+#None
+(similar to zero in mathematics)
