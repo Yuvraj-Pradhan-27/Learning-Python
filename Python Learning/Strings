@@ -3,12 +3,12 @@ It is written within ' ' or " "
 
 To write a long string '''    ''' are used 
 
-#assign string to a variable
+#assign a string to a variable
 a = 'apple'
 print(a)
 
 #multiline string
-a = '''My name is yuvraj and I am boy.
+a = '''My name is Yuvraj and I am a boy.
        I study at MIT-Adt'''
 
 #Strings are Arrays
@@ -34,3 +34,83 @@ Use it in an if statement
 txt = 'I am Yuvraj and I am a good boy'
 if 'Yuvraj' in txt:
     print("'Yes, 'Yuvraj' is there in txt.")
+
+#Check if NOT
+To check if a certain phrase or character is NOT present in a string, we can use the keyword not in.
+txt = "The best things in life are free!"
+print("expensive" not in txt) just opp of if in
+
+#slicing
+a = 'Hello, World'
+print(a[2:5])
+
+slice from the start
+a = 'Hello, World'
+print(a[:5])
+
+slice to the end
+a = 'Hello, World'
+print(a[1:])
+
+Negative Indexing
+Use negative indexes to start the slice from the end of the string
+a = "Hello, World!"
+print(a[-5:-2]) (if we put a positive value after using - the code will not work)
+
+#modify strings
+a = 'Hello, World'
+print(a(upper()) (it will print all the characters to upper case)
+
+a = "Hello, World!"
+print(a.lower()) (it will print all the characters to lower case)
+
+#Remove Whitespace
+Whitespace is the space before and/or after the actual text, and very often you want to remove this space.
+a = " Hello, World! "
+print(a.strip()) # returns "Hello, World!"
+
+#Replace Strings
+a = 'hello, world'
+print(a.replace 'h', 'j')
+
+#Split String
+The split() method returns a list where the text between the specified separator becomes the list items.
+a = "Hello, World!"
+print(a.split(",")) # returns ['Hello', ' World!']
+
+#String Concatenation
+To concatenate, or combine, two strings you can use the + operator.
+a = 'Yuvraj'
+b = 'Pradhan'
+print(a + ' ' + b)
+
+#String Format
+we cannot add strings and numbers, if we want to do so we must format the number or int to str)
+a = 'My age is'
+b = 18
+print(a + ' '  + str(b))
+
+The format() method takes an unlimited number of arguments, and are placed into the respective placeholders:
+my_fruits = 'i have {} oranges, and {} apple, and {} guavas'
+b = 10
+c = 5
+d = 12
+print(my_fruits.format(b, c, d))
+
+#Escape Character
+An escape character is a backslash \ followed by the character you want to insert.
+txt = "We are the so-called \"Vikings\" from the north."
+\'	Single Quote	
+\\	Backslash	
+\n	New Line	
+\r	Carriage Return	
+\t	Tab	
+\b	Backspace	
+\f	Form Feed	
+\ooo	Octal value	
+\xhh	Hex value
+
+
+
+
+
