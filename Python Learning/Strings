@@ -1,0 +1,36 @@
+#String is a piece of text
+It is written within ' ' or " "
+
+To write a long string '''    ''' are used 
+
+#assign string to a variable
+a = 'apple'
+print(a)
+
+#multiline string
+a = '''My name is yuvraj and I am boy.
+       I study at MIT-Adt'''
+
+#Strings are Arrays
+Square brackets can be used to access elements of the string.
+a = 'Python'
+print(a[1])
+
+#looping through a string
+for x in 'banana':
+    print(x)
+
+#string length
+x = 'Hello, World'
+print(len(x))
+
+#check string
+To check if a certain phrase or character is present in a string, we can use the keyword in.
+txt = 'this is a free world'
+print('free' in txt)
+
+Use it in an if statement
+
+txt = 'I am Yuvraj and I am a good boy'
+if 'Yuvraj' in txt:
+    print("'Yes, 'Yuvraj' is there in txt.")
