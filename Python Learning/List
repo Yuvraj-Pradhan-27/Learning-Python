@@ -21,3 +21,57 @@ print(type(mylist))
 #The list() Constructor
 thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
 print(thislist)
+
+#List Slicing
+amazon_list = ['sunglass',
+               'belt',
+               'shoes',
+               'Tie']
+amazon_cart[0] = 'laptop
+new_cart = amazon_cart[0:3]
+print(new_cart)
+
+#Matrix
+This consists 2d data mostly used for image processing, very useful in machine learning
+
+matrix = [
+[1,2,3],
+[1,2,3],
+[1,2,3],
+]
+
+print(matrix[0][1]) 
+gives 2
+
+#List Methods
+_adding
+list = ["1","2","3","4","5"]
+list.append("6")
+new_list = list
+print(new_list)
+
+_insert
+thislist = ["1", "2", "3"]
+thislist.insert(3, "4")
+print(thislist)
+
+_extend list
+list = ["1", "2", "3", "4", "5"]
+add_to_list = ["6", "7", "8"]
+list.extend(add_to_list)
+print(list)
+
+#Remove Specified Item
+The remove() method removes the specified item.
+
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+#Remove Specified Index
+The pop() method removes the specified index.
+
+list = ["1", "2", "3", "4", "5"]
+list.pop(3)
+print(list)
+
