@@ -126,6 +126,40 @@ thislist = [100, 50, 60, 49]
 thislist.sort(reverse = True)
 print(thislist)
 
+#Copy a List
+You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+There are ways to make a copy, one way is to use the built-in List method copy().
+
+mylist = ["apple", "bamama", "orange", "pineapple"]
+this_list = mylist.copy()
+print(this_list)
+
+#Join list
+list1 = ["1", "2", "3", "4", "5"]
+list2 = ["6", "7", "8", "9", "10"]
+list3 = list1 + list2
+print(list3)
+
+list1 = ["1", "2", "3", "4", "5"]
+list2 = ["6", "7", "8", "9", "10"]
+list1.extend(list2)
+list3 = list1
+print(list3)
+
+Method	             Description
+append()	           Adds an element at the end of the list
+clear()	             Removes all the elements from the list
+copy()	             Returns a copy of the list
+count()	             Returns the number of elements with the specified value
+extend()	           Add the elements of a list (or any iterable), to the end of the current list
+index()	             Returns the index of the first element with the specified value
+insert()	           Adds an element at the specified position
+pop()                Removes the element at the specified position
+remove()	           Removes the item with the specified value
+reverse()	           Reverses the order of the list
+sort()	             Sorts the list
+
+
 
 
 
