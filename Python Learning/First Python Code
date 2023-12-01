@@ -1,7 +1,0 @@
-#Basically, this is my first Python code and I just typed a basic Print code and an Input code
-
-print('Yuvraj Pradhan')
-input('What is your name?')
-name = input('What is your name?')
-print(name)
-print('Heeeeeellllllooooo ' + name)
