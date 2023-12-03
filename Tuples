@@ -118,4 +118,21 @@ thistuple = ("apple", "banana", "cherry")
 del thistuple
 print(thistuple) #this will raise an error because the tuple no longer exists
 
+#Using Asterisk*
+If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list:
+
+Example
+Assign the rest of the values as a list called "red":
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, yellow, *red) = fruits
+print(green)
+print(yellow)
+print(red)
+
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
+
 
