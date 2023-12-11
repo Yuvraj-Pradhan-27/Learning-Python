@@ -1,0 +1,29 @@
+print(True == 1)
+print('' == 1)
+print([] == 1)
+print(10 == 10.0)
+print([] == [])
+
+output- 
+True
+False
+False
+True
+True
+
+"==" checks for equality
+
+print(True is 1)
+print('' is 1)
+print([] is 1)
+print(10 is 10.0)
+print([] is [])
+
+output-
+False
+False
+False
+False
+False
+
+"is" checks for equality and value
