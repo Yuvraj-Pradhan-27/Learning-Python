@@ -1,0 +1,14 @@
+#1. Write a Python program to print the following string in a specific format
+    # I used \n to write the next line in a new line and \t for a tab space
+print("Twinkle, twinkle, little star,\n\tHow I wonder what you are!\n\t\tUp above the world so high,\n\t\tLike a diamond in the sky.\nTwinkle, twinkle, little star,\n\tHow I wonder what you are")
+
+# #2. Write a Python program to find out what version of Python you are using.
+    #I used sys python module to check the version of python
+
+import sys #Import the sys module to access system specific parametres and functions
+
+#Print the Python version to the console
+print("Python Version")
+
+#Use the sys.version attribute to get the python version and print it
+print(sys.version)
