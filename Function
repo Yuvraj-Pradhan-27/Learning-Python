@@ -158,3 +158,19 @@ d = 7
 
 calculate_gmean(c,d)
 
+def say_hello(name, emoji):
+    print(f'Hello {name} {emoji}')
+
+say_hello('Andrei', '✈️')
+say_hello('Yuvi', '✈️')
+say_hello('Anshu', '✈️')
+
+say_hello(name = 'Raj', emoji='🧿')
+
+def sum(num1, num2):
+    return num1 + num2
+
+total = sum(10,5)
+print(total)
+
+
