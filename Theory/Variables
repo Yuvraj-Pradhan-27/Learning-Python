@@ -1,0 +1,38 @@
+#Way to store data in the compurter
+
+name = Yuvraj (name is the variable)
+(process of assigning the value is binding)
+
+python is case sensitive
+
+#cases in python
+snake case - my_name(everything lowercase connected with _)
+camel case - myName(every word starts with uppercase except first word)
+pascal case - MyName(every word starts with uppercase)
+
+#assigning multiple values
+x, y, z = 1, 2, 3
+
+#assigning one value to many
+x = y = z = "orange"
+
+#unpack data
+fruits ["apple, banana, orange"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+
+#output variable
+x = "Python is awesome"
+print(x)
+
+x = Python
+y = Is
+z = Awesome
+print(x, y, z)
+OR
+x = Python
+y = Is
+z = Awesome
+print(x + y + z)
