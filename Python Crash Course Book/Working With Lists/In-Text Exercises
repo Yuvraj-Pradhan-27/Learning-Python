@@ -1,0 +1,120 @@
+#Looping using for loop
+magicians = ['alice', 'david', 'carolina']
+for magicians in magicians:
+  print(magicians.title())
+  
+#Using string methods in looping
+magicians = ['alice', 'david', 'carolina']
+for magician in magicians:
+  print(f"\nHello {magician.title()}, you performed a great trick!")
+  print(f"I can't wait to see your next trick {magician.title()}!")
+
+print(f"\nThankyou everyone, that was a great performance!\n")
+
+#Using the range() function
+for value in range(1,5):
+  print(value) #Although it looks like it should print from 1 to 5, it actually prints from 0 to 4.
+  #It follows off by one method.
+
+#Using range() to make a list of numbers
+numbers = list(range(1,6))
+print(numbers)
+
+#We can also use range() to tell python to skip numbers in a given range.
+#If we pass a third argument to range(), Python uses that value as a step size.
+even_numbers = list(range(2,11,2))
+print(even_numbers)
+
+#Here's how to make the list of 10 square numbers into a list
+squares = []
+for value in range(1,11):
+  square = value ** 2
+  squares.append(square)
+
+print(squares)
+
+#We can also do this in a more concise way
+squares = []
+for value in range(1,11):
+  squares.append(value ** 2)
+
+print(squares)
+
+#Simple statistics with a list of numbers
+digits = [1,2,3,4,5,6,7,8,9,0]
+print(max(digits))
+print(min(digits))
+print(sum(digits))
+
+#List comprehensions
+squares = [value**2 for value in range(1,11)]
+print(squares)
+
+#Slicing a list
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3])
+
+#If you omit the first index in a slice, python automatically starts at the beggining of the list
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[:4])
+
+#If you omit the second index in a slice, python automatically ends at the last item of the list
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[2:])
+
+#You can also use negative indexing in slice
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[-3:])
+
+#Looping through a slice
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+for player in players[:3]:
+  print(player.title())
+
+#Copying a list
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+
+print("\nMy favourite foods are:")
+print(my_foods)
+
+print("\nMy friend's favourite foods are:")
+print(friend_foods)
+
+#To prove that we actually have to separate lists, we'll add a new food to each list and show that each list keeps track of the appropriate person's favourite foods
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+
+print("\nMy favourite foods are:")
+print(my_foods)
+
+print("\nMy friend's favourite foods are:")
+print(friend_foods)
+
+#Defining a tuple
+#Python refers to values that cannot change as immutable, and an immutable list is called a tuple.
+dimensions = (200, 50)
+print(dimensions[0])
+print(dimensions[1])  #A tuple looks just like a list, except you use parantheses instead of sqaure brackets.
+
+#Tuples are technically defined by the presence of a comma; the parentheses make them look neater and more readable. If you want to define a tuple with only one element, you need to include a comma after the element.
+my_t = (3,)
+
+#Looping through all values in a tuples
+dimensions = (200, 50)
+for dimension in dimensions:
+  print(dimension)
+
+#Writing over a tuple
+dimensions = (200, 50)
+print("Original dimensions:")
+for dimension in dimensions:
+  print(dimension)
+
+dimensions = (400, 100)
+print("\nModified dimensions:")
+for dimensions in dimensions:
+  print(dimensions)
