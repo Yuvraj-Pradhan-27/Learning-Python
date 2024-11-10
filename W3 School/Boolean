@@ -1,0 +1,39 @@
+#Booleans can be true or false
+
+name = Yuvraj
+is_cool = false
+
+is_cool = true
+
+bool(1) = true
+bool(0) = false
+
+a = 200
+b = 33
+if b > a:
+    print("b is greater than a")
+else:
+    print("a is greater than b")
+
+#Evaluate Values and Variables
+print(bool("Hello"))
+print(bool(15))
+
+#Most Values are True
+Almost any value is evaluated to True if it has some sort of content.
+Any string is True, except empty strings.
+Any number is True, except 0.
+Any list, tuple, set, and dictionary are True, except empty ones.
+
+#Some Values are False
+bool(False)
+bool(None)
+bool(0)
+bool("")
+bool(())
+bool([])
+bool({})
+
+One more value, or object in this case, evaluates to False, 
+and that is if you have an object that is made from a class with a 
+__len__ function that returns 0 or False:
