@@ -1,0 +1,220 @@
+#A simple example
+cars = ["audi", "bmw", "mercedes", "porsche", "subaru"]
+
+for car in cars:
+  if car == "bmw":
+    print(car.upper())
+  else:
+    print(car.title())
+    
+print("\n")
+
+#Checking for equality
+car = "bmw"
+if car == "bmw":
+  print("True")
+
+print("\n")
+
+#Ignoring case when checking for equality
+car = "Audi"
+if car.lower() == "audi":
+  print("True")
+
+print("\n")
+
+#Checking for inequality
+requested_topping = "mushrooms"
+if requested_topping != "anchovies":
+  print("Hold the anchovies!")
+
+print("\n")
+
+#Numerical Comparisions
+age = 18
+if age == 18:
+  print("True") #Equality
+else:
+  print("False")
+
+if age != 18:
+  print("False") #Inequality
+else:
+  print("False")
+
+print("\n")
+
+#Other comparisions
+age_0 = 19
+if age < 21:
+  print("True") #Smaller than
+else:
+  print("False")
+
+if age_0 <= 19:
+  print("True") #Smaller than or equal to
+
+if age_0 > 21:
+  print("True") #Greater than
+else:
+  print("False")
+
+if age_0 >= 21:
+  print("True") #Greater than or equal to
+else:
+  print("False")
+
+print("\n")
+
+#Checking multiple conditions using AND
+#If each test passes, the expression evaluates to True, otherwise it evaluates to false
+age_1 = 22
+age_2 = 18
+if age_1 >= 21 and age_2 >= 21:
+  print("True")
+else:
+  print("False")
+
+print("\n")
+
+#Checking multiple conditions using OR
+#If at least one test passes, the expression evaluates to True, It fails only if both test fail.
+age_1 = 22
+age_2 = 18
+if age_1 >= 21 or age_2 >= 21:
+  print("True")
+else:
+  print("False")
+
+print("\n")
+
+#Checking if a value is in a list
+requested_toppings = ['mushrooms', 'onions', 'pineapple']
+if 'mushrooms' in requested_toppings:
+  print("True")
+else:
+  print("False")
+
+print("\n")
+
+#Checking wether a value is not in a list
+banned_users = ['andrew', 'carolina', 'david']#1
+user = 'marie'
+user = 'andrew'
+if user not in banned_users:
+  print(f"You can contact with {user.title()}.")
+else:
+  print(f"{user.title()} is in banned users list.")
+
+print("\n")
+
+#Boolean expressions
+game_active = True
+can_edit = False
+
+#If-else statements
+age_3 = 19
+if age_3 >= 18:
+  print("You are old enough to vote!")
+else:
+  print("Ghar jake pogo dekh!")
+
+print("\n")
+
+#If-elif-else chain
+age_4 = 12
+if age_4 < 4:
+  print("Fare = $5")
+elif age_4 < 18:
+  print("Fare = $10")
+elif age_4 < 65:
+  print("Fare = $15")
+else:
+  print("Fare = $20")
+
+print("\n")
+
+#writing the above code shorter
+#Using multiple elif blocks
+age_4 = 12
+if age_4 < 4:
+  price = 5
+elif age_4 < 18:
+  price = 10
+elif age_4 < 65:
+  price = 15
+else:
+  price = 20
+
+print(f"Your fare is ${price}.")
+
+print("\n")
+
+#Omitting the else block
+age_5 = 15
+if age_5 < 4:
+  price = 0
+elif age_5 < 18:
+  price = 5
+elif age_5 <65:
+  price = 10
+elif age_5 >= 65:
+  price = 5
+
+print(f"Your fare is ${price}.")
+
+print("\n")
+
+#Testing multiple conditions
+#Use only if blocks in this case
+requested_toppings = ['mushrooms', 'extra cheese']
+if 'mushrooms' in requested_toppings:
+  print("Adding Mushrooms.")
+if 'extra cheese' in requested_toppings:
+  print("Adding extra cheese.")
+
+print("\nFinished making your pizza!")
+
+print("\n")
+
+#Using if statements with lists
+#Checking for special items
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
+for requested_topping in requested_toppings:
+  print(f"Adding {requested_topping}.")
+
+print("\nFinished making your pizza.")
+
+print("\n")
+
+#What if we run out of green peppers?
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
+for requested_topping in requested_toppings:
+  if requested_topping == 'green peppers':
+    print(f"Sorry we ran out of {requested_topping}.")
+  else:
+    print(f"Adding {requested_topping}.")
+
+print("\n")
+
+#Checking that a list is not empty
+requested_topping = []
+if requested_topping:
+  for requested_topping in requested_toppings:
+    print(f"Adding {requested_topping}")
+  print("\nFinished making your pizza.")
+else:
+  print("Are you sure you want a plain pizza?")
+
+print("\n")
+
+#Using multiple list
+available_toppings = ['mushrooms', 'olives', 'green peppers', 'pepper', 'pineapple', 'extra cheese']
+requested_toppings = ['mushrooms', 'french fries', 'extra cheese']
+for requested_topping in requested_toppings:
+  if requested_topping in available_toppings:
+    print(f"Adding {requested_topping}")
+  else:
+    print(f"Sorry, we don't have {requested_topping}.")
+
+print("\nFinished making your pizza!")
