@@ -1,0 +1,17 @@
+is_magician = False
+is_expert = True
+
+#checl if magician and expert: "you are a master magician"
+
+#check if magician but not expert: "at leasst you're getting there"
+
+#if you're not a magician: 'You need magic powers"
+
+if is_expert and is_magician:
+    print("you are a master magician")
+
+elif is_magician:
+    print("at leasst you're getting there")
+
+    if is_magician:
+        print("at leasst you're getting there")
