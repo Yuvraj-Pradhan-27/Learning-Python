@@ -1,0 +1,109 @@
+#Making a list
+#We use square [] brackets to make a list
+bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+print(bicycles)
+
+#Accessing elements in a list
+bicycles = ['trek', 'cannondale', 'redline', 'specialzed']
+print(bicycles[0]) #use index inside square beackets to access an element #index starts at 0 not 1
+
+#You can also use string methods in list elements
+bicycles = ['trek', 'cannondale', 'redline', 'specialzed']
+print(bicycles[0].title())
+
+#To access the last element in the list use -1.
+bicycles = ['trek', 'cannondale', 'redline', 'specialzed']
+print(bicycles[-1])
+
+#Using individual values from a list
+bicycles = ['trek', 'cannondale', 'redline', 'specialzed']
+message = f"My first bicycle was a {bicycles[0].title()}."
+print(message)
+
+#Modifying elements in a list
+motorcycles = ['honda', 'yamaha', 'suzuki']
+motorcycles[0] = 'ducati'
+print(motorcycles)
+
+#Adding elements to a list (end)
+#using .append()
+motorcycles = ['honda', 'yamaha', 'suzuki']
+motorcycles.append('ducati')
+print(motorcycles)
+
+#Inserting elements to a list
+motorcycles = ['honda', 'yamaha', 'suzuki']
+motorcycles.insert(0, 'ducati')
+print(motorcycles)
+
+#Removing elements from a list
+#Using del statement
+motorcycles = ['honda', 'yamaha', 'suzuki']
+del motorcycles[0]
+print(motorcycles)
+
+#using pop() method
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+
+popped_motorcycle = motorcycles.pop()
+print(motorcycles)
+print(popped_motorcycle)
+
+#We can use pop() method to print a statement about the last motorcycle we bought
+motorcycles = ['honda', 'yamaha', 'suzuki']
+first_owned = motorcycles.pop(0)
+
+print(f"The first motorcycle I owned was a {first_owned.title()}.")
+
+#Removing an item by value
+#Using .remove() method
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+print(motorcycles)
+
+motorcycles.remove('ducati')
+print(motorcycles)
+
+#We can also use remove() method to work on a value that's being removed from a list
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+print(motorcycles)
+
+too_expensive = 'ducati'
+motorcycles.remove(too_expensive)
+print(motorcycles)
+print(f"\nA {too_expensive.title()} is too expensive for me.")
+
+#Sorting a list permanently with the sort() method
+#for alphabetical order
+cars = ['bmw', 'audi', 'toyota', 'subaru'] 
+cars.sort()
+print(cars)
+
+#for reverse-alphabetical order
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort(reverse=True) #True should be in title case
+print(cars)
+
+#Sorting a list temporarily with the sorted() function
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+
+print("\nHere is the original cars list: ")
+print(cars)
+
+print("\nHere is the sorted cars list: ")
+print(sorted(cars))
+
+#Printing list in reverse order
+#using .reverse() method. 
+# It doesn't sort the list in reverse alphabetical order.
+# It puts the last item to first.
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars)# using .reverse() method.
+
+cars.reverse()
+print(cars)
+
+#Finding the length of a list
+#using len() function
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(len(cars))
