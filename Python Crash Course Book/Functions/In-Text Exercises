@@ -1,0 +1,257 @@
+# A simple function
+def greet_user():
+  """Display a simple greeting."""
+  print("Hello!")
+
+greet_user()
+
+# Passing information to a function
+# If youre going to pass information to a function, you can include that information in the parentheses of the function call.
+def greet_user(username):
+  """Display a simple greeting."""
+  print(f"Hello, {username.title()}!")
+
+greet_user('radha')
+
+# Parameter: A variable in a function definition.
+# Argument: A value passed to a function when calling it.
+
+# Positional Arguments
+def describe_pet(animal_type, pet_name):
+  """Display information about a pet."""
+  print(f"\nI have a {animal_type}.")
+  print(f"My {animal_type}'s name is {pet_name.title()}.")
+
+describe_pet('hamster', 'harry')
+
+# Multiple Function Calls
+def describe_pet(animal_type, pet_name):
+  """Display information about a pet."""
+  print(f"\nI have a {animal_type}.")
+  print(f"My {animal_type}'s name is {pet_name.title()}.")
+
+describe_pet('hamster', 'harry')
+describe_pet('dog', 'while')
+
+# Keyword Arguments
+def describe_pet(animal_type, pet_name):
+  """Display information about a pet."""
+  print(f"\nI have a {animal_type}.")
+  print(f"My {animal_type}'s name is {pet_name.title()}.")
+
+describe_pet(animal_type='hamster', pet_name='harry')
+# It is a name vale pair, you give the name and value with '=' in between.
+
+# Default Values
+def describe_pet(pet_name, animal_type='dog'):
+  """Display information about a pet."""
+  print(f"\nI have a {animal_type}.")
+  print(f"My {animal_type}'s name is {pet_name.title()}.")
+
+describe_pet(pet_name='willie')
+
+# Equivalent Function Calls
+def describe_pet(pet_name, animal_type='dog'):
+  """Display information about a pet."""
+  # A dog named Willie
+describe_pet('Willie')
+describe_pet(pet_name='willie')
+  # A hamster named Harry
+describe_pet('harry', 'hamster')
+describe_pet(pet_name='harry', animal_type='hamster')
+describe_pet(animal_type='hamster', pet_name='harry')
+
+# Avoiding argument errors
+# Unmatched argument occurs when you provide fewer or more arguments than a function needs to do its work.
+
+# Returning a simple value
+# Let's look at a function that takes a first and last name, and returns a neatly formatted full name.
+def get_formatted_name(first_name, last_name):
+  """Return a full name, neatly formatted."""
+  full_name = f"{first_name} {last_name}" 
+  return full_name.title()
+
+musician = get_formatted_name('jimi', 'hendrix')
+print(musician)
+
+# Making an argument optional
+def get_formatted_name(first_name, middle_name, last_name):
+  """Return a full name, neatly formatted."""
+  full_name = f"{first_name} {middle_name} {last_name}"
+  return full_name.title()
+
+musician = get_formatted_name('john', 'lee', 'hooker')
+print(musician)
+      #This is if you want a middle name compulsorily.
+
+  #But middle name is optional. So use the code below to do that.
+def get_formatted_name(first_name, last_name, middle_name=''):
+  """Return a full name, neatly formatted."""
+  if middle_name:
+    full_name = f"{first_name} {middle_name} {last_name}"
+  else:
+    full_name = f"{first_name} {last_name}"
+  return full_name.title()
+
+musician = get_formatted_name('jimi', 'hendrix')
+print(musician)
+
+musician = get_formatted_name('john', 'hooker', 'lee')
+print(musician)
+
+# Returning a dictionary
+def build_person(first_name, last_name):
+  """Return a dictionary of information about a person."""
+  person = {'first': first_name, 'last': last_name}
+  return person
+
+musician = build_person('jimi', 'hendrix')
+print(musician)
+
+def build_person(first_name, last_name, age = None):
+  """Return a dictionary of information about a person."""
+  person = {'first': first_name, 'last': last_name}
+  if age:
+    person['age'] = age
+    return person
+
+musician = build_person('jimi', 'hendrix', age = 27)
+print(musician)
+
+# Using a function with a while loop
+def get_formatted_name(first_name, last_name):
+  """Return a full name, neatly formatted."""
+  full_name = f"{first_name} {last_name}"
+  return full_name.title()
+
+    # This is an infinte loop
+# while True:
+#   print("\nPlease tell me yout name:")
+#   f_name = input("First name: ")
+#   l_name = input("Last name: ")
+
+#   # formatted_name = get_formatted_name(f_name, l_name)
+#   # print(f"\nHello, {formatted_name}!")
+
+    # Using break statement to end the loop
+
+def get_formatted_name(first_name, last_name):
+  """Return a full name, neatly formatted."""
+  full_name = f"{first_name} {last_name}"
+  return full_name.title()
+
+while True:
+  print("\nPlease tell me your name:")
+  print("(enter 'q' at any time to quit)")
+
+  f_name = input("First name: ")
+  if f_name == 'q':
+    break
+
+  l_name = input("Last name: ")
+  if l_name == 'q':
+    break
+
+  formatted_name = get_formatted_name(f_name, l_name)
+  print(f"\nHello, {formatted_name}!")
+
+# Passing a list
+def greet_users(names):
+  """Print a simple greeting to each user in the list"""
+  for name in names:
+    msg = f"Hello, {name.title()}!"
+    print(msg)
+
+usernames = ['hannah', 'ty', 'margot']
+greet_users(usernames)
+
+# Modifying a list in a function
+    # Start with some designs that need to be printed.
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+    # Simulate printing each design, until none are left.
+    # Move each design to completed_models after printing.
+while unprinted_designs:
+  current_design = unprinted_designs.pop()
+  print(f"Printing model: {current_design}")
+  completed_models.append(current_design)
+
+    # Display all completed models.
+print("\nThe following models have been printed:")
+for completed_model in completed_models:
+  print(completed_model)
+
+# Preventing a function from modifying a list
+    #You can send a copy of a list to a function like this:
+function_name(list_name[:]) # This is a general notation
+
+# Passing an arbitary number of arguments
+def make_pizza(*toppings):
+  """Print the list of toppings that have been requested."""
+  print(toppings)
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+    #Now we can replace the print call() with a loop that runs through the list of toppings and describes the pizza being ordered.
+def make_pizza(*toppings):
+  """Summarize the pizza we are about to make."""
+  print("\nMaking a pizza with the following toppings:")
+  for topping in toppings:
+    print(f"- {topping}")
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+# Mixing positional and arbitrary arguments
+def make_pizza(size, *toppings):
+  """Summarize the pizza we are about to make."""
+  print(f"\nMaking a {size}-inch pizza with the following toppings:")
+  for topping in toppings:
+    print(f"- {topping}")
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+# Using arbitrary keyword arguments
+def build_profile(first, last, **user_info):
+  """Build a dictionary containing everything we know about a user."""
+  user_info['first_name'] = first
+  user_info['last_name'] = last
+  return user_info
+
+user_profile = build_profile('Albert', 'Einstein',
+                            Location = 'Princeton',
+                            Field = 'Physics')
+print(user_profile)
+
+# Storing your functions in modules
+# You can store functions in a separate file and import it into your program.
+
+     #Importing an entire module
+def make_pizza(size, *toppings):
+  """Summarize the pizza we are about to make."""
+  print(f"\nMaking a {size}-inch pizza wiht the following toppings:")
+  for topping in toppings:
+    print(f"- {topping}")
+
+import pizzas
+
+pizzas.make_pizza(16, 'pepperoni')
+pizzas.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+    # Importing Specific Functions
+    # Below are examples with generic syntax
+from module_name import function_name # Single function
+from module_name import function_0, function_1 # Multiple functions
+
+# Using as to give a function an alias
+from module_name import function_name as fn # Gives fn the value of function_name
+
+# Using as to give a module an alias
+import module_name as mn # Gives mn the value of module_name
+
+# Importing all functions in a module
+from module_name import *
+
