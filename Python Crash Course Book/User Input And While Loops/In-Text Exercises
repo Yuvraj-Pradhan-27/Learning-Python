@@ -1,0 +1,181 @@
+# How input function works
+# The input function pauses your program and waits for the user to enter some text. Once python receives the user's input, it assigns that input to a variable to make it convinient for you to work with.
+message = input("Tell me something, I will say it back to you:")
+print(message)
+
+print("\n")
+
+# To write prompts longer than one line use (+=)
+prompt = "If you share your name, we can personalize the messages you see."
+prompt += "\nWhat is your first name?"
+
+name = input(prompt)
+print(f"\nHello, {name}")
+
+print("\n")
+
+# Using int() to accept numerical input
+age = input("How old are you? ")
+age = int(age)
+print(age)
+
+print("\n")
+
+# Using conditionals in user input int()
+height = input("What is your height? (in cm)")
+height = int(height)
+
+if height <= 165:
+  print("You are short.")
+else:
+  print("You are tall.")
+
+print("\n")
+
+# The modulo operator
+# It is a useful tool for working with numerical information is the modulo operator. The modulo operator takes two numbers and divides one number by another number and returns the remainder.
+rem_1 = 4 % 3
+print(rem_1)
+
+print("\n")
+
+# Use modulo operator and conditionals to check if a number is even or odd
+number = input("Give me a number i will tell it's even or odd:")
+number = int(number)
+
+if number % 2 == 0:
+  print(f"{number} is even.")
+else:
+  print(f"{number} is odd.")
+
+print("\n")
+
+# While loop
+# The while loop runs as long as or while a certain condition is true.
+
+# Using while loop to count from 1 to 5
+current_number = 1
+while current_number <= 5:
+  print(current_number)
+  current_number += 1 # because this statement is inside the loop it will be executed over again and again till it satisfies the while condition.
+
+#Letting the user when to quit
+#We'll define a quit value and then keep the program running as long as the user has not entered the quit value.
+prompt = "Tell me something, I will say it back to you: "
+prompt += "\nEnter 'quit' to exit the program."
+
+message = ""
+while message != 'quit':
+  message = input(prompt)
+  print(message)
+
+  # This program works well except when you enter quit and the program is terminated it prints the 'quit' as if it is a actual statement. A simple if text fixes it.
+prompt = "Tell me something, I will say it back to you: "
+prompt += "\nEnter 'quit' to exit the program."
+
+message = ""
+while message != 'quit':
+  message = input(prompt)
+  
+  if message != 'quit':
+    print(message)
+
+# Using a flag
+# The variable called a flag, acts as a signal to the program. We can write our programs so they run while the flag is set to True and stop running when any oft the several events sets the value of the flag to False.
+
+# Using the flag to stop a program
+prompt = "Tell me something, I will say it back to you: "
+prompt += "\nEnter 'quit' to exit the program."
+
+active = True #Active is a flag set to true
+message = ""
+while message != 'quit':
+  message = input(prompt)
+
+  if message == 'quit':
+    active = False #The flag is set to false if message is 'quit'
+  else:
+    print(message)
+
+# Using a break to exit the loop
+prompt = "Tell me the name of s city you have visited: "
+prompt += "\nEnter 'quit' to exit the program."
+
+active = True #Active is a flag set to true
+city = ""
+while city != 'quit':
+  city = input(prompt)
+
+  if city == 'quit':
+       break
+  else:
+    print(f"I would love to go to {city}")
+
+# Using continue in a loop
+# Rather than breaking out of a loop entirely without executing the rest of its code, you can use the continue statement to return to the beggining of the loop based on the result of a conditional test.
+current_number = 0
+while current_number < 10:
+  current_number += 1
+  if current_number % 2 == 0:
+    continue
+
+  print(current_number)
+
+# Always check the code after writing to avoid infinite loops
+# If you executed a infinite loop then you can use ctrl + c to stop the program
+
+# Moving  items from one list to another
+  
+  # Start with users that need to be verified
+  # and an empty list to hold confirmed users
+unconfirmed_users = ['alice', 'brayn', 'candace']
+confirmed_users = []
+
+  # Verify each user until there are no more unconfirmed users.
+  # Move each verified user into the list of unconfirmed users.
+while unconfirmed_users:
+  current_user = unconfirmed_users.pop()
+
+  print(f"Verifying user: {current_user.title()}")
+  confirmed_users.append(current_user)
+
+  # Display all current users
+print("\nThe following users have been confirmed: ")
+for confirmed_user in confirmed_users:
+  print(confirmed_user.title())
+
+  # Because 'candace' is last in the unconfirmed_users list, her name will be the first to be removed, assigned to the current_user and added to the confirmed_users list.
+
+# Removing all instances of specific values from a list
+  # You can do this by using remove() within a while loop
+pets = ['dog', 'cat', 'pig', 'cat', 'duck', 'dog', 'cat', 'dog', 'pig', 'cow', 'cat']
+print(pets)
+
+while 'cat' in pets:
+  pets.remove('cat')
+
+print(pets)
+
+# Filling a dictionary with user input
+  # Let's make a polling program
+responses = {}
+  # Set a flag to indicate the polling is active
+polling_active = True
+
+while polling_active:
+  # Prompt for the person's name and response.
+  name = input("\nWhat is your name? ")
+  response = input("Which place do you like the most? ")
+
+  # Store the response in dictionary
+  responses[name] = response
+
+  # Find out if anyone else is interested to take the poll
+  repeat = input("Would you like to let another person respond? (Yes/No) ")
+  if repeat == 'No':
+    polling_active = False
+
+  # Polling is complete. Show the results.
+print("\n----Poll Results----")
+for name, response in responses.items():
+  print(f"{name} would like to visit {response}.")
