@@ -1,0 +1,76 @@
+print("Hello Python World!")
+
+#using variables
+message = "Hello Python World!"
+print(message)
+
+#changing variable's value
+message = "Hello Python world!"
+print(message)
+
+message = "Hello Python Crash Course World!"
+print(message)
+
+#changing case in a string with methods
+name = "ada lovelace"
+print(name.title())
+
+name = "Ada Lovelace"
+print(name.upper())
+print(name.lower())
+
+#using variables in strings
+first_name = "ada"
+last_name = "lovelace"
+full_name = f"{first_name} {last_name}" #to insert a variable's value into a string, use the "f" string format
+print(full_name)
+
+#usinf f string to compose complete messages using the inforamtion stored in variables
+first_name = "ada"
+last_name = "lovelace"
+full_name = f"{first_name} {last_name}"
+print(f"Hello, {full_name.title()}!")
+
+#you can also use f-strings to compose a message and assign the entire message to a variable
+
+first_name = "ada"
+last_name = "lovelace"
+full_name = f"{first_name} {last_name}"
+message = f"Hello, {full_name.title()}!"
+print(message)
+
+#adding white space to strings with tabs or newlines
+print("Python")
+print("\tPython") #use "\t" to add a tab space"
+
+print("Languages:\npython\nc\nc++\njava") #use "\n" to add a newline
+
+#stripping whitespace
+favourite_language = "python "
+print(favourite_language)
+
+favourite_language = "python "
+print(favourite_language.rstrip())
+
+favourite_language = " python"
+print(favourite_language.lstrip())
+
+favourite_language = " python "
+print(favourite_language.strip())
+
+#removing Prefixes
+example_url = "https://www.example.org"
+print(example_url.removeprefix('https://')) #use removeprefix() to remove a prefix from a string and use '' inside the removeprefix() to specify the prefix to remove
+
+#underscores in numbers
+universe_age = 14_000_000_000 #python ignores underscores in these kinds of values
+print(universe_age)
+
+#multiple assignment
+x, y, z = 0, 0, 0
+print(x, y, z) #you can assign values to more than one variable using just one line of code
+
+#constants
+MAX_CONNECTIONS = 5000
+      #a constant is a variable whose value you do not intend to change during a program's execution
+      #constants are written in all caps
