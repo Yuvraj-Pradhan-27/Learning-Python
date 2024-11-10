@@ -1,0 +1,252 @@
+#A simple dictionary
+alien_0 = {'color': 'green', 'points': 5}
+
+print(alien_0['color'])
+print(alien_0['points'])
+
+#Accessing Values in a Dictionay
+alien_0 = {'color': 'green'} #color is the key, green is the value
+print(alien_0['color'])
+
+#Adding New Key-Value Pairs
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+
+alien_0['x_position'] = 0
+alien_0['y_position'] = 25
+print(alien_0)
+
+#Starting with an Empty Dictionary
+alien_0 = []
+
+alien_0 = {'color': 'green'}
+alien_0 = {'points': 5}
+
+print(alien_0)
+
+#Modifying Values in a Dictionary
+alien_0 = {'color': 'green'}
+print(f"The alien is {alien_0['color']}.")
+
+alien_0['color'] = 'yellow'
+print(f"The alien is now {alien_0['color']}.")
+
+#Tracking the Position of an Object that can move at different speeds
+alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
+print(f"Original position: {alien_0['x_position']}")
+  #Move the alien to the right
+  #Determine how far to move the alien based on its current speed.
+if alien_0['speed'] == 'slow':
+  x_incriment = 1
+elif alien_0['speed'] == 'medium':
+  x_incriment = 2
+else:
+  x_incriment = 3
+
+  #The new position is the old position plus the incriment.
+alien_0['x_position'] = alien_0['x_position'] + x_incriment
+
+print(f"New position: {alien_0['x_position']}")
+
+#Removing Key-Value Pairs
+#Use del to remove a key-value pair
+alien_0 = {'color': 'green', 'points': 5}
+del alien_0['points']
+print(alien_0)
+
+#A Dictionary of Similar Objects
+favourite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'rust',
+  'phil': 'python',
+}
+  #To use this dictionary, given the name of the perso who took the poll, you can easily look up their favourite language.
+favourite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'rust',
+  'phil': 'python',
+}
+language = favourite_languages['sarah'].title()
+print(f"Sarah's favourite language is {language}.")
+
+#Using get() ro access values
+alien_0 = {'color': 'green', 'speed': 'slow'}
+point_value = alien_0.get('points', 'No point value assigned.')
+print(point_value)
+
+#Looping Through a Dictionary
+#Looping through all key-value pairs
+user_0 = {
+  'username': 'efermi',
+  'first': 'enrico',
+  'last': 'fermi',
+}
+for key, value in user_0.items():
+  print(f"\nKey: {key.title()}")
+  print(f"Value: {value.title()}")
+
+#Looping through all keys in a dictionary
+favourite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'rust',
+  'phil': 'python',
+}
+for name in favourite_languages.keys():
+  print(name.title())
+
+#Let's print a message to a couple of friends about the languages they chose.
+favourite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'rust',
+  'phil': 'python',
+}
+
+friends = ['phil', 'sarah']
+for name in favourite_languages.keys():
+  print(f"Hello {name.title()}.")
+
+  if name in friends:
+    language = favourite_languages[name].title()
+    print(f"\t{name.title()}, I see you love {language}!")
+
+#You can also check if anyone voted to the poll or not
+favourite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'rust',
+  'phil': 'python',
+}
+
+if 'erin' not in favourite_languages.keys():
+  print(f"Erin, please take our poll.")
+
+#Looping through a dictionaries key's in a particular order
+#One way to do this the sort() function
+favourite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'rust',
+  'phil': 'python',
+}
+
+for name in sorted(favourite_languages.keys()):
+  print(f"{name.title()}, thank you for taking the poll.")
+
+#Looping through all values in a dictionary
+favourite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'rust',
+  'phil': 'python',
+}
+print("The following languages have been mentioned:")
+for language in favourite_languages.values():
+  print(language.title())
+
+#Nesting
+#A list of dictionaries
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'yellow', 'points': 10}
+alien_2 = {'color': 'red', 'points': 15}
+
+aliens = [alien_0, alien_1, alien_2] #There will be no apostophe in the list
+
+for alien in aliens:
+  print(alien)
+
+#An empty list that automatically generates a dictionary
+aliens = []
+
+  #Make 30 green aliens.
+for alien_number in range(30):
+  new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+  aliens.append(new_alien)
+
+  #Show the first five aliens
+for alien in aliens[:5]:
+  print(alien)
+print("...")
+
+  #Show how many aliens have been created.
+print(f"The total numbers of aliens created are {len(aliens)}.")
+
+#To change the first three aliens to yellow, medium-speed aliens worth 10 points each.
+aliens = []
+
+  #Make 30 green aliens.
+for alien_number in range(30):
+  new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+  aliens.append(new_alien)
+
+for alien in aliens[0:3]:
+  if alien['color'] == 'green':
+    alien['color'] = 'yellow'
+    alien['speed'] = 'medium'
+    alien['points'] = 10
+
+#Show the first 5 aliens:
+for alien in aliens[0:5]:
+  print(alien)
+print("...")
+
+#You could expand this loop by adding an elif block that turns yellow aliens into red. fast-moving ones worth 15 points each. Without showing the entire list of aliens, that would be a lot to keep track of.
+for alien in aliens[0:3]:
+  if alien['color'] == 'green':
+    alien['color'] = 'yellow'
+    alien['speed'] = 'medium'
+    alien['points'] = 10
+  elif alien['color'] == 'yellow':
+    alien['color'] = 'red'
+    alien['speed'] = 'fast'
+    alien['points'] = 15
+
+#A List in a Dictionary
+#Store information about a pizza being ordered.
+pizza = {
+  'crust': 'thick',
+  'toppings': ['mushrooms', 'extra cheese'],
+}
+#Summarize the order.
+print("You ordered a" + pizza['crust'] + ("crust pizza") + "with the following toppings:")
+
+for topping in pizza['toppings']:
+  print("\t" + topping)
+
+#If we were to store each person’s responses in a list, people could choose more than one favorite language
+favourite_languages = {
+  'jen': ['python', 'ruby'],
+  'sarah': ['c'],
+  'edward': ['ruby', 'go'],
+  'phil': ['python', 'haskell'],
+}
+
+for name, languages in favourite_languages.items():
+  print("\n" + name.title() + "'s favourite languges are:")
+  for language in languages:
+    print("\t" + language.title())
+
+#A Dictionary in a Dictionary
+users = {
+  'aeinstein': {
+    'first': 'albert',
+    'last': 'einstein',
+    'location': 'princeton',
+     },
+  'mcurie': {
+    'first': 'marie',
+    'last': 'curie',
+    'location': 'paris',
+     },
+}
+
+for username, user_info in users.items():
+  print("\nUsername: " + username)
+  full_name = user_info['first'] + " " + user_info['last']
+  location = user_info['location']
+
+  print("\tFull name: " + full_name.title())
+  print("\tLocation: " + location.title())
